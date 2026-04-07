@@ -8,7 +8,8 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Zap, Eye, EyeOff } from 'lucide-react'
+import { Eye, EyeOff } from 'lucide-react'
+import Image from 'next/image'
 import { Spinner } from '@/components/ui/spinner'
 
 export default function LoginPage() {
@@ -45,13 +46,18 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-muted/30 px-4">
       <div className="w-full max-w-md">
         <div className="flex justify-center mb-8">
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-              <Zap className="h-7 w-7" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">Economize</h1>
-              <p className="text-sm text-muted-foreground">em Energia</p>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/images/logo-icon.png"
+              alt="Economize em Energia"
+              width={72}
+              height={72}
+              className="h-[72px] w-auto object-contain"
+              priority
+            />
+            <div className="flex flex-col leading-none">
+              <span className="text-[28px] font-semibold text-[#16a34a]">Economize</span>
+              <span className="text-sm font-normal text-[#4b5563]">em Energia</span>
             </div>
           </div>
         </div>
@@ -121,7 +127,7 @@ export default function LoginPage() {
             </Link>
 
             <div className="w-full border-t pt-4">
-              <p className="text-xs text-muted-foreground text-center mb-3">
+              <p className="text-sm text-muted-foreground text-center">
                 Não tem conta?{' '}
                 <Link
                   href="/auth/signup"
@@ -130,22 +136,6 @@ export default function LoginPage() {
                   Criar conta
                 </Link>
               </p>
-
-              <p className="text-xs text-muted-foreground text-center mb-2">
-                Credenciais de demonstração:
-              </p>
-              <div className="grid grid-cols-2 gap-2 text-xs">
-                <div className="bg-muted p-2 rounded">
-                  <p className="font-medium">Admin</p>
-                  <p className="text-muted-foreground">admin@economize.com.br</p>
-                  <p className="text-muted-foreground">admin123</p>
-                </div>
-                <div className="bg-muted p-2 rounded">
-                  <p className="font-medium">Indicadora</p>
-                  <p className="text-muted-foreground">maria@indicadora.com</p>
-                  <p className="text-muted-foreground">indicadora123</p>
-                </div>
-              </div>
             </div>
           </CardFooter>
         </Card>
