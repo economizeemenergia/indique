@@ -58,16 +58,19 @@ export function AppSidebar() {
 
   return (
     <Sidebar className="border-r border-sidebar-border/20">
-      <SidebarHeader className="border-b border-sidebar-border/20 bg-gradient-to-b from-sidebar/60 to-sidebar/40 py-4">
-        <Link href="/" className="flex items-center gap-3 px-2">
+      <SidebarHeader className="border-b border-sidebar-border/20 bg-gradient-to-b from-sidebar/60 to-sidebar/40 h-20 flex items-center px-4">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src="/images/logo-icon.png"
-            alt="Economize"
+            alt="Economize em Energia"
             width={40}
             height={40}
-            className="h-10 w-auto object-contain"
+            className="h-10 w-auto object-contain flex-shrink-0"
           />
-          <span className="text-lg font-bold text-[#22C55E]">Economize</span>
+          <div className="flex flex-col leading-none">
+            <span className="text-lg font-semibold text-[#16a34a]">Economize</span>
+            <span className="text-xs font-normal text-[#4b5563]">em Energia</span>
+          </div>
         </Link>
       </SidebarHeader>
       
