@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useAuth } from '@/lib/auth-context'
+import Image from 'next/image'
 import {
   LayoutDashboard,
   UserPlus,
@@ -14,7 +15,6 @@ import {
   Users,
   Settings,
   LogOut,
-  Zap,
   Table,
 } from 'lucide-react'
 import {
@@ -59,14 +59,15 @@ export function AppSidebar() {
   return (
     <Sidebar className="border-r border-sidebar-border/20">
       <SidebarHeader className="border-b border-sidebar-border/20 bg-gradient-to-b from-sidebar/60 to-sidebar/40 py-4">
-        <Link href="/" className="flex items-center gap-2 px-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground shadow-lg">
-            <Zap className="h-5 w-5" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-bold text-sidebar-foreground">Economize</span>
-            <span className="text-xs text-sidebar-foreground/70">em Energia</span>
-          </div>
+        <Link href="/" className="flex items-center gap-3 px-2">
+          <Image
+            src="/images/logo-icon.png"
+            alt="Economize"
+            width={40}
+            height={40}
+            className="h-10 w-auto object-contain"
+          />
+          <span className="text-lg font-bold text-[#22C55E]">Economize</span>
         </Link>
       </SidebarHeader>
       
