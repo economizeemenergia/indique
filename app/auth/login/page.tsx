@@ -45,7 +45,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-muted/30 px-4">
       <div className="w-full max-w-md">
-        <div className="flex justify-center mb-8">
+        <div className="flex flex-col items-center mb-8">
           <div className="flex items-center gap-2">
             <Image
               src="/images/logo-icon.png"
@@ -60,6 +60,9 @@ export default function LoginPage() {
               <span className="text-sm font-normal text-[#4b5563]">em Energia</span>
             </div>
           </div>
+          <span className="mt-3 text-base font-semibold text-[#4b5563] tracking-wide">
+            Embaixador Economize
+          </span>
         </div>
 
         <Card>
