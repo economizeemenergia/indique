@@ -46,18 +46,18 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-muted/30 px-4">
       <div className="w-full max-w-md">
         <div className="flex justify-center mb-8">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <Image
               src="/images/logo-icon.png"
               alt="Economize em Energia"
-              width={56}
-              height={56}
-              className="h-14 w-auto object-contain"
+              width={72}
+              height={72}
+              className="h-[72px] w-auto object-contain"
               priority
             />
-            <div className="flex flex-col">
-              <span className="text-2xl font-semibold leading-tight text-[#16a34a]">Economize</span>
-              <span className="text-base font-normal leading-tight text-[#4b5563]">em Energia</span>
+            <div className="flex flex-col leading-none">
+              <span className="text-[28px] font-semibold text-[#16a34a]">Economize</span>
+              <span className="text-sm font-normal text-[#4b5563]">em Energia</span>
             </div>
           </div>
         </div>
