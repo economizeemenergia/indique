@@ -8,7 +8,8 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Zap, Eye, EyeOff } from 'lucide-react'
+import { Eye, EyeOff } from 'lucide-react'
+import Image from 'next/image'
 import { Spinner } from '@/components/ui/spinner'
 
 export default function LoginPage() {
@@ -46,12 +47,16 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="flex justify-center mb-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-              <Zap className="h-7 w-7" />
-            </div>
+            <Image
+              src="/images/logo-icon.png"
+              alt="Economize em Energia"
+              width={48}
+              height={48}
+              className="h-12 w-auto object-contain"
+            />
             <div>
-              <h1 className="text-2xl font-bold text-foreground">Economize</h1>
-              <p className="text-sm text-muted-foreground">em Energia</p>
+              <h1 className="text-2xl font-bold text-[#22C55E]">Economize</h1>
+              <p className="text-sm text-[#22C55E]/80">em Energia</p>
             </div>
           </div>
         </div>
