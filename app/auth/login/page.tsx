@@ -127,7 +127,7 @@ export default function LoginPage() {
             </Link>
 
             <div className="w-full border-t pt-4">
-              <p className="text-xs text-muted-foreground text-center mb-3">
+              <p className="text-sm text-muted-foreground text-center">
                 Não tem conta?{' '}
                 <Link
                   href="/auth/signup"
@@ -136,22 +136,6 @@ export default function LoginPage() {
                   Criar conta
                 </Link>
               </p>
-
-              <p className="text-xs text-muted-foreground text-center mb-2">
-                Credenciais de demonstração:
-              </p>
-              <div className="grid grid-cols-2 gap-2 text-xs">
-                <div className="bg-muted p-2 rounded">
-                  <p className="font-medium">Admin</p>
-                  <p className="text-muted-foreground">admin@economize.com.br</p>
-                  <p className="text-muted-foreground">admin123</p>
-                </div>
-                <div className="bg-muted p-2 rounded">
-                  <p className="font-medium">Indicadora</p>
-                  <p className="text-muted-foreground">maria@indicadora.com</p>
-                  <p className="text-muted-foreground">indicadora123</p>
-                </div>
-              </div>
             </div>
           </CardFooter>
         </Card>
